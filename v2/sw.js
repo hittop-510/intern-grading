@@ -1,4 +1,4 @@
-const C='igv2app-399f7e17';const F=['./','index.html','manifest.json','icon-192.png','icon-512.png'];
+const C='igv2app-b6966eda';const F=['./','index.html','manifest.json','icon-192.png','icon-512.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(F)));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k==='ig-v2').map(k=>caches.delete(k)))));self.clients.claim();});
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;
